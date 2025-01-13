@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peso Conversion</title>
+    <script type="text/javascript">
+        function convertCurrency() {
+            var pesoAmount = 100;
+
+            // Conversion rates
+            var dollarRate = 0.018;
+            var yenRate = 2.27;
+            var euroRate = 0.015;
+            var poundRate = 0.013;
+            var bahtRate = 0.57;
+
+            // Convert 100 Pesos to selected currencies
+            var dollars = pesoAmount * dollarRate;
+            var yen = pesoAmount * yenRate;
+            var euro = pesoAmount * euroRate;
+            var pound = pesoAmount * poundRate;
+            var baht = pesoAmount * bahtRate;
+
+            // Display the results
+            document.getElementById("dollarOutput").innerText = "100 Pesos is " + dollars.toFixed(2) + " Dollars.";
+            document.getElementById("yenOutput").innerText = "100 Pesos is " + yen.toFixed(2) + " Yen.";
+        }
+    </script>
+</head>
+<body onload="convertCurrency()">
+    <h1>Peso Conversion</h1>
+    <p id="dollarOutput"></p>
+    <p id="yenOutput"></p>
+</body>
+</html>
